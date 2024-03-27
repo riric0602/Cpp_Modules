@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rchbouki <rchbouki@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:13:06 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/12/05 11:07:10 by rchbouki         ###   ########.fr       */
+/*   Updated: 2024/03/27 15:40:10 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,10 @@ void	Harl::complain(std::string level)
 	{
 		case DEBUG:
 			Harl::debug();
-			// fallthrough
 		case INFO:
 			Harl::info();
-			// fallthrough
 		case WARNING:
 			Harl::warning();
-			// fallthrough
 		case ERROR:
 			Harl::error();
 			break ;

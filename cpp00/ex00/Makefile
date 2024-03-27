@@ -6,14 +6,14 @@
 #    By: rchbouki <rchbouki@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 14:42:19 by rchbouki          #+#    #+#              #
-#    Updated: 2024/03/27 15:30:43 by rchbouki         ###   ########.fr        #
+#    Updated: 2024/03/27 15:32:57 by rchbouki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 RM = rm -f
-HEADER = -I ./includes
+HEADER = .
 OBJS = ${SRCS:.cpp=.o}
 SRCS =	megaphone.cpp
 NAME = megaphone

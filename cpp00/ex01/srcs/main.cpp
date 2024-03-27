@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rchbouki <rchbouki@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:09:34 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/11/30 18:40:25 by rchbouki         ###   ########.fr       */
+/*   Updated: 2024/03/27 15:36:42 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	main()
 {
-	int			index;
-	int			totalContacts;
 	std::string	input;
 	std::string	first;
 	std::string	last;
