@@ -6,7 +6,7 @@
 /*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:09:34 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/11/21 17:11:07 by rchbouki         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:40:25 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,38 +25,33 @@ int	main()
 	Phonebook	myPhonebook;
 	while (1)
 	{
-		std::cout << RED << "Choose one of these requests : ADD, SEARCH or EXIT" << RESET << std::endl;
-		std::cout << GREEN << "INPUT : " << RESET;
+		if (std::cin.eof()) 
+		{
+			std::cout << BOLD << ERROR << "\nCtrl-D pressed. Exit." << RESET << std::endl;
+			break;
+		}
+		std::cout << RED << BOLD << "--------------------CHOOSE OF OF THESE REQUESTS {ADD, SEARCH, EXIT}--------------------" << RESET << std::endl;
+		std::cout << GREEN << BOLD << "INPUT : " << RESET;
 		std::cin >> input;
 		if (input.compare("ADD") == 0)
 		{
-			std::cout << YELLOW << "First Name : " << RESET;
-			std::cin >> first;
-			std::cout << YELLOW << "Last Name : " << RESET;
-			std::cin >> last;
-			std::cout << YELLOW << "Nickname : " << RESET;
-			std::cin >> pseudo;
-			std::cout << YELLOW << "Phone Number : " << RESET;
+			std::cout << YELLOW << BOLD << "First Name : " << RESET;
+			std::getline(std::cin >> std::ws, first);
+			std::cout << YELLOW << BOLD << "Last Name : " << RESET;
+			std::getline(std::cin >> std::ws, last);
+			std::cout << YELLOW << BOLD << "Nickname : " << RESET;
+			std::getline(std::cin >> std::ws, pseudo);
+			std::cout << YELLOW << BOLD << "Phone Number : " << RESET;
 			std::cin >> number;
-			std::cout << YELLOW << "Darkest Secret : " << RESET;
-			std::cin >> secret;
-			myPhonebook.setNbContact(myPhonebook.getNbContact() + 1);
-			myPhonebook.setIndex(myPhonebook.getIndex() + 1);
-			index = myPhonebook.getIndex();
-			totalContacts = myPhonebook.getNbContact();
+			std::getline(std::cin, secret);
+			std::cout << YELLOW << BOLD << "Darkest Secret : " << RESET;
+			std::getline(std::cin >> std::ws, secret);
 			myPhonebook.addContact(Contact(first, last, pseudo, number, secret));
-			myPhonebook.displayPhonebook();
-			std::cout << "\n" << std::endl;
 		}
 		else if (input.compare("SEARCH") == 0)
-		{
-			
-		}
-		else if (input.compare("EXIT ") == 0)
-		{
-			// should call the exit function here	
+			myPhonebook.searchContact();
+		else if (input.compare("EXIT") == 0)
 			break ;
-		}
 	}
 	return (0);
 }

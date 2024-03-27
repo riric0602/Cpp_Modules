@@ -6,7 +6,7 @@
 /*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:34:38 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/11/21 16:55:12 by rchbouki         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:27:44 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class Phonebook
 		/* Methods */
 		void	addContact(Contact newContact);
 		void	searchContact();
+		void	displayPhonebook(int index);
 		void	displayUtils(std::string input);
-		void	displayPhonebook();
 };
 
 #endif

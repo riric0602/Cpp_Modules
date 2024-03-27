@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+         #
+#    By: rchbouki <rchbouki@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 19:49:31 by rchbouki          #+#    #+#              #
-#    Updated: 2023/11/16 20:30:20 by rchbouki         ###   ########.fr        #
+#    Updated: 2024/03/27 15:31:05 by rchbouki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
+CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 RM = rm -f
 HEADER = ./includes
@@ -20,8 +20,8 @@ SRCS =	srcs/Phonebook.cpp \
 OBJS = ${SRCS:.cpp=.o}
 NAME = phonebook
 
-.c.o :
-	@${CC} ${CFLAGS} -I${HEADER} -c $< -o ${<:.c=.o}
+.cpp.o :
+	@${CC} ${CFLAGS} -I${HEADER} -c $< -o ${<:.cpp=.o}
 
 ${NAME} : ${OBJS}
 	@${CC} ${CFLAGS} -o ${NAME} ${OBJS}

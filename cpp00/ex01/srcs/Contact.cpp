@@ -6,7 +6,7 @@
 /*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:08:23 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/11/20 21:44:53 by rchbouki         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:03:42 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,30 @@
 Contact::Contact() {}
 
 /* Constructor */
-Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret) {}
+Contact::Contact(std::string& firstName, std::string& lastName, std::string& nickname, std::string& phoneNumber, std::string& darkestSecret) : firstName(firstName), lastName(lastName), nickname(nickname), phoneNumber(phoneNumber), darkestSecret(darkestSecret) {}
 
 /* Setters */
-void	Contact::setFirstName(std::string first)
+void	Contact::setFirstName(std::string& first)
 {
 	firstName = first;
 }
 
-void	Contact::setLastName(std::string last)
+void	Contact::setLastName(std::string& last)
 {
 	lastName = last;
 }
 
-void	Contact::setNickname(std::string pseudo)
+void	Contact::setNickname(std::string& pseudo)
 {
 	nickname = pseudo;
 }
 
-void	Contact::setNumber(std::string number)
+void	Contact::setNumber(std::string& number)
 {
 	phoneNumber = number;
 }
 
-void	Contact::setSecret(std::string secret)
+void	Contact::setSecret(std::string& secret)
 {
 	darkestSecret = secret;
 }

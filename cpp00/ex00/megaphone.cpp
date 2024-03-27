@@ -6,7 +6,7 @@
 /*   By: rchbouki <rchbouki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:42:02 by rchbouki          #+#    #+#             */
-/*   Updated: 2023/11/15 19:48:45 by rchbouki         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:02:32 by rchbouki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	main(int argc, char *argv[])
 		{
 			for (i = 0; argv[j][i] != '\0'; i++)
 				result += std::toupper(argv[j][i]);
-			result += ' ';
 			j++;
 		}
 		std::cout << result << std::endl;
